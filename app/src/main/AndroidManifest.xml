@@ -15,16 +15,17 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity" />
+        <activity android:name=".SignUpActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
         <activity android:name=".ForgotPasswordActivity" />
+        <activity android:name=".ScheduleVisitActivity"
+            android:theme="@style/AppTheme.ActionBar"/>
         <activity
             android:name=".MainActivity"
-            android:theme="@style/AppTheme" />
-        <activity android:name=".ScheduleVisitActivity" />
-        <activity
-            android:name=".MainerActivity"
-            android:label="@string/title_activity_mainer"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme">
+
+        </activity>
+
     </application>
 
 </manifest>

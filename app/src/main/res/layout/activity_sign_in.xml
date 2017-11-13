@@ -23,7 +23,9 @@
             android:id="@+id/app_image"
             android:contentDescription="@string/app_name"
             android:layout_width="match_parent"
-            android:layout_height="256dp"
+            android:layout_height="150dp"
+            android:paddingTop="8dp"
+            android:src="@mipmap/house_sketch"
             android:layout_marginTop="@dimen/activity_vertical_margin"/>
 
 
@@ -34,10 +36,11 @@
             android:layout_below="@id/app_image"
             android:inputType="textPersonName"
             android:hint="@string/username"
+            android:fontFamily="sans-serif-condensed"
             android:drawableStart="@drawable/emoticon_happy"
             android:drawablePadding="8dp"
             android:padding="@dimen/activity_vertical_margin"
-            android:layout_marginTop="64dp"
+            android:layout_marginTop="86dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"/>
 
@@ -49,8 +52,8 @@
             android:layout_below="@id/username_et"
             android:hint="@string/password"
             android:inputType="textPassword"
-            android:fontFamily="sans-serif"
-            android:drawableStart="@drawable/key_variant"
+            android:fontFamily="sans-serif-condensed"
+            android:drawableStart="@drawable/ic_key"
             android:drawablePadding="8dp"
             android:padding="@dimen/activity_vertical_margin"
             android:layout_margin="8dp"/>
@@ -63,10 +66,12 @@
             android:layout_below="@id/password_et"
             android:layout_alignParentEnd="true"
             android:text="@string/forgot_password"
+            android:fontFamily="sans-serif-condensed"
             android:textIsSelectable="true"
             android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
             android:layout_marginEnd="8dp"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="28dp"/>
 
 
         <Button
@@ -75,13 +80,14 @@
             android:layout_height="64dp"
             android:layout_below="@id/password_et"
             android:text="@string/sign_in"
+            android:fontFamily="sans-serif-condensed"
             android:textAllCaps="false"
-            android:textSize="16sp"
-            android:background="@drawable/user_background"
-            android:layout_marginTop="52dp"
+            android:textSize="20sp"
+            android:textColor="@color/colorAppBackground"
+            android:background="@drawable/registration_button_background"
+            android:layout_marginTop="86dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"/>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -92,13 +98,14 @@
             android:orientation="horizontal"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginTop="16dp">
+            android:layout_marginTop="64dp">
 
             <TextView
                 android:id="@+id/no_account_tv"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/no_account_tv"
+                android:fontFamily="sans-serif-condensed"
                 android:textAlignment="center"/>
 
             <TextView
@@ -107,11 +114,13 @@
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
                 android:text="@string/sign_up"
+                android:fontFamily="sans-serif-condensed"
                 android:textStyle="bold"
                 android:textIsSelectable="true"
+                android:textColor="@color/colorPrimaryDark"
                 android:layout_marginStart="4dp"/>
         </LinearLayout>
-
+.
     </RelativeLayout>
 
 </RelativeLayout>

@@ -8,9 +8,10 @@
     <string name="forgot_password">Forgot Password?</string>
     <string name="no_account_tv">Don\'t have an account?</string>
     <string name="sign_up">Sign up</string>
-    <string name="existing_account">Already have an account?</string>
+    <string name="existing_account">Have an account with us?</string>
     <string name="title_activity_mainer">MainerActivity</string>
 
+    <string name="facebook_login">Sign in with facebook</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 

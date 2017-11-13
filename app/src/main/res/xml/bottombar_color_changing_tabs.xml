@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab
+        android:id="@+id/tab_listings"
+        icon="@drawable/ic_home"
+        title="Listings"
+        barColorWhenSelected="#73b695"/>
+    <tab
+        android:id="@+id/tab_favorites"
+        icon="@drawable/ic_favorite2"
+        title="Favorites"
+        barColorWhenSelected="#d90f0f"/>
+    <tab
+        android:id="@+id/tab_profile"
+        icon="@drawable/ic_smile"
+        title="Profile"
+        barColorWhenSelected="#f7ff01"/>
+</tabs>

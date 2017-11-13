@@ -2,9 +2,10 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <corners android:radius="4dp"/>
+
     <gradient xmlns:android="http://schemas.android.com/apk/res/android"
-        android:startColor="#9effe0"
-        android:centerColor="#adfab9"
+        android:startColor="#adfab9"
         android:endColor="#96e5b5"
         android:angle="45"
         android:startX="30"
@@ -13,3 +14,4 @@
         android:endY="70"
         android:type="linear" tools:targetApi="n" />
 </shape>
+

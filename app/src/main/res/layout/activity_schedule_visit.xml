@@ -6,14 +6,255 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@color/colorAppBackground"
     tools:context="com.ire.huthunt.ScheduleVisitActivity">
-
 
     <ImageView
         android:layout_width="wrap_content"
+        android:layout_height="260dp"
+        app:srcCompat="@mipmap/house6"
+        android:scaleType="fitXY"
+        android:id="@+id/imageView" />
+
+
+    <TextView
+        android:id="@+id/price_tv"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/page_7"
-        android:id="@+id/imageView"
+        android:layout_below="@id/imageView"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-condensed"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="N1m"/>
+
+    <TextView
+        android:id="@+id/address_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/price_tv"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-condensed"
+        android:text="5, Adeola Odeku, Victoria Island, Lagos"/>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_favorite"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:id="@+id/faveImageButton"
+        android:background="@android:color/transparent"/>
+
+    <LinearLayout
+        android:id="@+id/house_features_images"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/address_tv"
+        android:layout_marginBottom="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp">
+
+            <ImageView
+                android:id="@+id/living_room_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_sofa"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/sitting_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/living_room_image"
+                android:text="2 sitting"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#545454"
+                android:paddingTop="16dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp">
+
+            <ImageView
+                android:id="@+id/bedroom_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_bed"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/bed_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bedroom_image"
+                android:text="4 bed"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#545454"
+                android:paddingTop="16dp"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginEnd="8dp">
+
+            <ImageView
+                android:id="@+id/bathroom_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hot_tub"
+                android:layout_centerInParent="true"/>
+
+            <TextView
+                android:id="@+id/bath_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bathroom_image"
+                android:text="4 bath"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="#545454"
+                android:paddingTop="16dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/actions_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_below="@id/house_features_images"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/call_agent_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Call Agent"
+            android:textSize="16sp"
+            android:textColor="@color/colorAppBackground"
+            android:fontFamily="sans-serif-condensed"
+            android:textAllCaps="false"
+            android:drawableStart="@drawable/ic_call"
+            android:layout_marginEnd="4dp"
+            android:padding="8dp"
+            android:background="@drawable/call_button_background"/>
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_my_location"
+            android:layout_marginStart="4dp"
+            android:padding="8dp"
+            android:textAllCaps="false"
+            android:background="@drawable/map_button_background"
+            android:text="Directions"
+            android:textSize="16sp"
+            android:textColor="@color/colorAppBackground"
+            android:fontFamily="sans-serif-condensed"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/schedule_title_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/actions_buttons"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Schedule Tour"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-condensed"/>
+
+        <TextView
+            android:id="@+id/pick_date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/schedule_title_tv"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="Pick a date with us"/>
+
+        <EditText
+            android:id="@+id/pick_date_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pick_date_tv"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="DD/MM/YYYY"/>
+
+        <TextView
+            android:id="@+id/choose_time_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pick_date_et"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="What time?"/>
+
+        <EditText
+            android:id="@+id/choose_time_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/choose_time_tv"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="sans-serif-condensed"
+            android:hint="HH:MM"/>
+
+    <Button
+        android:id="@+id/ok_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/choose_time_et"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="OK"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp"
+        android:fontFamily="sans-serif-condensed"
+        android:background="@drawable/ok_button_background"/>
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/price_tv"
+        android:layout_marginTop="39dp"
+        android:background="@color/transparent"
+        app:srcCompat="@drawable/ic_arrow_back" />
+
 </RelativeLayout>

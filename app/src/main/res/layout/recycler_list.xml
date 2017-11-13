@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -11,7 +12,14 @@
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         android:padding="@dimen/activity_vertical_margin">
-
     </android.support.v7.widget.RecyclerView>
 
-</FrameLayout>
+    <com.roughike.bottombar.BottomBar
+        android:id="@+id/bottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignBaseline="@id/card_recycler_view"
+        android:layout_alignParentBottom="true"
+        app:bb_tabXmlResource="@xml/bottombar_tabs"/>
+
+</RelativeLayout>

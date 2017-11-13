@@ -1,10 +1,12 @@
 package com.ire.huthunt;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -21,8 +23,8 @@ class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardHolder> {
 
     static class CardHolder extends RecyclerView.ViewHolder {
         private ImageView mHouseImage, mLivingrooomImage, mBedroomImage, mBathroomImage;
-        private TextView mPriceTv;
-        private TextView mAddressTv;
+        private TextView mPriceTv, mAddressTv, mSittingTv, mBedTv, mBathTv;
+        private ImageButton mFaveImageButton;
 
         CardHolder(View itemView) {
             super(itemView);
@@ -33,6 +35,11 @@ class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardHolder> {
             mLivingrooomImage = itemView.findViewById(R.id.living_room_image);
             mBedroomImage = itemView.findViewById(R.id.bedroom_image);
             mBathroomImage = itemView.findViewById(R.id.bathroom_image);
+            mSittingTv = itemView.findViewById(R.id.sitting_tv);
+            mBedTv = itemView.findViewById(R.id.bed_tv);
+            mBathTv = itemView.findViewById(R.id.bath_tv);
+            mFaveImageButton = itemView.findViewById(R.id.faveImageButton);
+
         }
     }
 
@@ -52,11 +59,16 @@ class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardHolder> {
         Card card = mCardList.get(position);
 
         holder.mHouseImage.setImageResource(card.getmImage());
+        holder.mFaveImageButton.setImageResource(R.drawable.ic_favorite);
         holder.mPriceTv.setText(card.getmPriceTag());
         holder.mAddressTv.setText(card.getmAddress());
-        holder.mLivingrooomImage.setImageResource(R.drawable.readability);
+        holder.mLivingrooomImage.setImageResource(R.drawable.ic_sofa);
         holder.mBedroomImage.setImageResource(R.drawable.ic_bed);
         holder.mBathroomImage.setImageResource(R.drawable.hot_tub);
+        holder.mSittingTv.setText(card.getmNumSittingrooms());
+        holder.mBedTv.setText(card.getmNumBedrooms());
+        holder.mBathTv.setText(card.getmNumBathrooms());
+
     }
 
     @Override

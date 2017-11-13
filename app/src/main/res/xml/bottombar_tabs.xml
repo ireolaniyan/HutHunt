@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs xmlns:android="http://schemas.android.com/apk/res/android">
+    <tab
+        android:id="@+id/tab_listings"
+        icon="@drawable/ic_home"
+        title="Listings" />
+    <tab
+        android:id="@+id/tab_favorites"
+        icon="@drawable/ic_favorite2"
+        title="Favorites" />
+    <tab
+        android:id="@+id/tab_profile"
+        icon="@drawable/ic_smile"
+        title="Profile" />
+</tabs>

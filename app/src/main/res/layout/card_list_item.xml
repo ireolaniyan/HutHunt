@@ -18,8 +18,7 @@
         android:layout_gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        card_view:cardCornerRadius="4dp"
-        card_view:cardElevation="8dp">
+        card_view:cardCornerRadius="6dp">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -30,7 +29,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="240dp"
                 android:scaleType="fitXY"
-                android:src="@mipmap/house6"/>
+                android:src="@mipmap/house10"/>
 
             <TextView
                 android:id="@+id/price_tv"
@@ -40,6 +39,9 @@
                 android:layout_marginTop="16dp"
                 android:layout_marginStart="8dp"
                 android:textSize="20sp"
+                android:textStyle="bold"
+                android:fontFamily="sans-serif-condensed"
+                android:textColor="@color/colorPrimaryDark"
                 tools:text="N1.7m"/>
 
             <TextView
@@ -49,6 +51,7 @@
                 android:layout_below="@id/price_tv"
                 android:layout_marginTop="8dp"
                 android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif-condensed"
                 tools:text="Victoria Island"/>
 
             <ImageButton
@@ -59,7 +62,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="8dp"
-                android:id="@+id/imageButton"
+                android:id="@+id/faveImageButton"
                 android:background="@android:color/transparent"/>
 
             <LinearLayout
@@ -67,34 +70,84 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/address_tv"
                 android:layout_alignParentBottom="true"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="8dp"
                 android:layout_marginStart="4dp"
                 android:layout_marginEnd="4dp"
                 android:layout_centerHorizontal="true"
                 android:orientation="horizontal">
 
-                <ImageView
-                    android:id="@+id/living_room_image"
+                <RelativeLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:src="@drawable/readability"
+                    android:layout_marginStart="8dp">
+
+                    <ImageView
+                        android:id="@+id/living_room_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_sofa"
+                        android:layout_centerInParent="true"/>
+
+                    <TextView
+                        android:id="@+id/sitting_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/living_room_image"
+                        tools:text="2 sitting"
+                        android:textColor="#545454"
+                        android:fontFamily="sans-serif-condensed"
+                        android:paddingTop="16dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="28dp">
+
+                    <ImageView
+                        android:id="@+id/bedroom_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_bed"
+                        android:layout_centerInParent="true"/>
+
+                    <TextView
+                        android:id="@+id/bed_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bedroom_image"
+                        tools:text="4 bed"
+                        android:textColor="#545454"
+                        android:fontFamily="sans-serif-condensed"
+                        android:paddingTop="16dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginEnd="64dp"/>
+                    android:layout_marginEnd="8dp">
 
-                <ImageView
-                    android:id="@+id/bedroom_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/ic_bed"
-                    android:layout_marginEnd="64dp"/>
+                    <ImageView
+                        android:id="@+id/bathroom_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/hot_tub"
+                        android:layout_centerInParent="true"/>
 
-                <ImageView
-                    android:id="@+id/bathroom_image"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/hot_tub"
-                    android:layout_marginEnd="32dp"/>
-
+                    <TextView
+                        android:id="@+id/bath_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/bathroom_image"
+                        tools:text="5 bath"
+                        android:textColor="#545454"
+                        android:fontFamily="sans-serif-condensed"
+                        android:paddingTop="16dp"/>
+                </RelativeLayout>
 
             </LinearLayout>
         </RelativeLayout>
